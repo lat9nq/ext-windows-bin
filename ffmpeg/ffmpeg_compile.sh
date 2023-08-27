@@ -6,7 +6,7 @@
 set -e
 
 THIS=$(readlink -e $0)
-VERSION=5.1.3
+VERSION=6.0
 INSTALL_DIR=ffmpeg-${VERSION}
 
 REQUIRED_DLLS_NAME=requirements.txt
@@ -52,7 +52,7 @@ cd build
     --enable-avfilter \
     --enable-shared \
     --disable-iconv \
-    --enable-filter=yadif \
+    --enable-filter=yadif,scale \
     --enable-d3d11va \
     --enable-hwaccel={h264_nvdec,vp9_nvdec} \
     --enable-nvdec \
